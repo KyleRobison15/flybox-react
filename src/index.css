@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+* {
+  font-family: Fredoka;
+}
+
+/* Font Style: Fredoka One */
+/* Darker Green: #71b956 ; 113, 185, 86, 1 */
+/* Lighter Green: #8ec861; 142, 200, 97, 1 */
+/* Darker Blue: #004463; 0, 68, 99, 1 */
+/* Lighter Blue: #004463; 0, 68, 99, 0.866 */
+/* Darker Pink: #c65b4b; 198, 91, 75, 1 */
+/* Lighter Pink: #ff634b; 255, 99, 75, 1 */

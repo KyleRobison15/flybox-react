@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
+import "./scss/index.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
-import LoginForm from "./components/loginForm";
-import "bootstrap/dist/css/bootstrap.css";
+import "./scss/css/index.min.css";
+import "bootstrap/dist/js/bootstrap.bundle";
 import "font-awesome/css/font-awesome.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

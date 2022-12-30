@@ -1,13 +1,15 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import { Component } from "react";
 import * as authService from "./services/authService";
 import NavBar from "./components/navBar";
 import LoginForm from "./components/loginForm";
 import RegisterForm from "./components/registerForm";
 import NotFound from "./components/notFound";
-import Home from "./components/home";
 import Logout from "./components/logout";
-import "./App.css";
+import Flybox from "./components/flybox";
+import Fly from "./components/fly";
+import Profile from "./components/profile";
+import "./scss/App.scss";
 
 class App extends Component {
   state = {};
@@ -18,15 +20,24 @@ class App extends Component {
   }
 
   render() {
+    const { user } = this.state;
     return (
-      <main className="container">
-        <NavBar user={this.state.user}></NavBar>
-        <div className="content">
+      <main>
+        <NavBar user={user}></NavBar>
+        <div className="app-content">
           <Routes>
             <Route path="/register" element={<RegisterForm />} />
             <Route path="/login" element={<LoginForm />} />
             <Route path="/logout" element={<Logout />} />
-            <Route path="/" element={<Home user={this.state.user} />} />
+            <Route path="/profile" element={<Profile user={user} />} />
+            <Route path="/flybox" element={<Flybox user={user} />} />
+            <Route path="/flybox/:flyName" element={<Fly user={user} />} />
+            <Route
+              path="/"
+              element={
+                user ? <Navigate to="/flybox" user={user} /> : <LoginForm />
+              }
+            />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>

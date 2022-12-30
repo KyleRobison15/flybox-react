@@ -10,11 +10,3 @@ export function registerUser(user) {
 export function getUserByUsername(username, httpOptions) {
   return http.get(`${api.users}/${username}`, { headers: httpOptions });
 }
-
-export function addFly(fly) {
-  return null;
-}
-
-export function getFlies() {
-  return null;
-}

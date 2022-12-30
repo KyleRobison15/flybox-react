@@ -1,0 +1,28 @@
+    //Define Custom Variables Here
+    
+    $bluePrimary: rgb(0,
+        68,
+        99,
+        1);
+    $blueSecondary: rgba(119, 179, 207, 0.38);
+    $greenPrimary: #71b956;
+    $greenSecondary: #8ec861;
+    $pinkPrimary: #c65b4b;
+    $pinkSecondary: #ff634b;
+
+    @import "../../node_modules/bootstrap/scss/functions";
+    @import "../../node_modules/bootstrap/scss/variables";
+    
+    //Update any sass-maps here
+        $custom-colors: (
+            "bluePrimary": $bluePrimary,
+            "blueSecondary": $blueSecondary,
+            "greenPrimary": $greenPrimary,
+            "greenSecondary": $greenSecondary,
+            "pinkPrimary": $pinkPrimary,
+            "pinkSecondary": $pinkSecondary
+        );
+    
+        $theme-colors: map-merge($theme-colors, $custom-colors);
+
+    @import "../../node_modules/bootstrap/scss/bootstrap";

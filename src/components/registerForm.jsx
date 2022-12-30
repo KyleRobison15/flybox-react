@@ -62,26 +62,35 @@ export class RegisterForm extends Form {
 
   render() {
     return (
-      <div>
-        <h1 className="display-1">Create Your Account</h1>
-        <form onSubmit={this.handleSubmit}>
-          {this.renderInputElement("email", "Email", "email")}
-          {this.renderInputElement("username", "Username")}
-          {this.renderPasswordToggleInput("password", "Password")}
-          <div className="row">
-            <div className="col">
-              {this.renderInputElement("firstName", "First Name")}
-            </div>
-            <div className="col">
-              {this.renderInputElement("lastName", "Last Name")}
+      <div className="container">
+        <div className="row">
+          <div className="col-3"></div>
+          <div className="col">
+            <div className="registerForm shadow p-5 mt-5 bg-body-tertiary border rounded-3">
+              <h1 className="display-5 text-center">Create Your Account</h1>
+              <form onSubmit={this.handleSubmit}>
+                {this.renderInputElement("email", "Email", "email")}
+                {this.renderInputElement("username", "Username")}
+                {this.renderPasswordToggleInput("password", "Password")}
+                <div className="row">
+                  <div className="col">
+                    {this.renderInputElement("firstName", "First Name")}
+                  </div>
+                  <div className="col">
+                    {this.renderInputElement("lastName", "Last Name")}
+                  </div>
+                </div>
+                {this.renderSubmitButton("Register")}
+              </form>
+              <div style={{ paddingTop: 20 }}>
+                <p>
+                  Already have an account?{" "}
+                  <NavLink to={"/login"}>Login Here</NavLink>
+                </p>
+              </div>
             </div>
           </div>
-          {this.renderSubmitButton("Register")}
-        </form>
-        <div style={{ paddingTop: 20 }}>
-          <p>
-            Already have an account? <NavLink to={"/login"}>Login Here</NavLink>
-          </p>
+          <div className="col-3"></div>
         </div>
       </div>
     );

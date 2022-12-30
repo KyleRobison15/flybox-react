@@ -40,18 +40,26 @@ export class LoginForm extends Form {
 
   render() {
     return (
-      <div>
-        <h1 className="display-1">Welcome Anglers!</h1>
-        <form onSubmit={this.handleSubmit}>
-          {this.renderInputElement("username", "Username")}
-          {this.renderPasswordToggleInput("password", "Password")}
-          {this.renderSubmitButton("Login")}
-        </form>
-        <div style={{ paddingTop: 20 }}>
-          <p>
-            Don't have an account?{" "}
-            <NavLink to={"/register"}>Register Here</NavLink>
-          </p>
+      <div className="container">
+        <div className="row">
+          <div className="col-3"></div>
+          <div className="col">
+            <div className="loginForm shadow p-5 mt-5 bg-body-tertiary border rounded-3">
+              <h1 className="display-5 text-center">Welcome Back</h1>
+              <form onSubmit={this.handleSubmit}>
+                {this.renderInputElement("username", "Username")}
+                {this.renderPasswordToggleInput("password", "Password")}
+                {this.renderSubmitButton("Login")}
+              </form>
+              <div style={{ paddingTop: 20 }}>
+                <p>
+                  Don't have an account?{" "}
+                  <NavLink to={"/register"}>Register Here</NavLink>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="col-3"></div>
         </div>
       </div>
     );

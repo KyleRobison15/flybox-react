@@ -73,6 +73,16 @@ export function generateCredentials(username, password) {
   return btoa(username + ":" + password);
 }
 
+export function generateAuthorizationHeader() {
+  const credentials = getCredentials();
+
+  const httpOptions = {
+    Authorization: "Basic " + credentials,
+  };
+
+  return httpOptions;
+}
+
 export function getCredentials() {
   return localStorage.getItem(localStorageKeys.credentials);
 }
@@ -83,4 +93,8 @@ export function getLoggedInUsername() {
 
 export function getRole() {
   return localStorage.getItem(localStorageKeys.role);
+}
+
+export function getLocalStorageKeys() {
+  return localStorageKeys;
 }

@@ -2,7 +2,7 @@
 // WE EXTRACTED ALL THE REUSABLE CODE INTO form.jsx
 // FOR LEARNING PURPOSES, TAKE A LOOK AT loginFormOriginal.jsx to see what the code was before we extracted it
 
-import React, { Component } from "react";
+import React from "react";
 import Joi from "joi-browser";
 import Form from "./common/form";
 import { NavLink } from "react-router-dom";

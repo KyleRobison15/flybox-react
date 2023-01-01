@@ -22,25 +22,23 @@ class App extends Component {
   render() {
     const { user } = this.state;
     return (
-      <main>
+      <main className="container-fluid d-flex flex-column vh-100 flex-grow-1">
         <NavBar user={user}></NavBar>
-        <div className="app-content">
-          <Routes>
-            <Route path="/register" element={<RegisterForm />} />
-            <Route path="/login" element={<LoginForm />} />
-            <Route path="/logout" element={<Logout />} />
-            <Route path="/profile" element={<Profile user={user} />} />
-            <Route path="/flybox" element={<Flybox user={user} />} />
-            <Route path="/flybox/:flyName" element={<Fly user={user} />} />
-            <Route
-              path="/"
-              element={
-                user ? <Navigate to="/flybox" user={user} /> : <LoginForm />
-              }
-            />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </div>
+        <Routes>
+          <Route path="/register" element={<RegisterForm />} />
+          <Route path="/login" element={<LoginForm />} />
+          <Route path="/logout" element={<Logout />} />
+          <Route path="/profile" element={<Profile user={user} />} />
+          <Route path="/flybox" element={<Flybox user={user} />} />
+          <Route path="/flybox/:flyName" element={<Fly user={user} />} />
+          <Route
+            path="/"
+            element={
+              user ? <Navigate to="/flybox" user={user} /> : <LoginForm />
+            }
+          />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </main>
     );
   }

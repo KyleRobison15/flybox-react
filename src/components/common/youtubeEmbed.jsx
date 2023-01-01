@@ -2,16 +2,14 @@ import React from "react";
 
 function YoutubeEmbed({ embedId }) {
   return (
-    <div className="ratio ratio-16x9">
-      <iframe
-        className="rounded-3"
-        src={`https://www.youtube.com/embed/${embedId}`}
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-        title="Embedded youtube"
-      />
-    </div>
+    <iframe
+      className="video"
+      src={`https://www.youtube.com/embed/${embedId}`}
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+      title="Embedded youtube"
+    />
   );
 }
 

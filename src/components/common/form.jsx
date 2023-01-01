@@ -124,7 +124,7 @@ export class Form extends Component {
       <button
         disabled={this.validate()}
         type="submit"
-        className="btn btn-bluePrimary"
+        className="btn btn-brandPrimary"
         to={path}
       >
         {label}

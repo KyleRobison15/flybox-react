@@ -1,26 +1,52 @@
     //Define Custom Variables Here
     
-    $bluePrimary: rgb(0,
-        68,
-        99,
-        1);
-    $blueSecondary: rgba(119, 179, 207, 0.38);
-    $greenPrimary: #71b956;
-    $greenSecondary: #8ec861;
-    $pinkPrimary: #c65b4b;
-    $pinkSecondary: #ff634b;
+    $primary: rgb(184, 202, 181, 1);
+    $brandPrimary: rgb(184, 202, 181, 1);
+    $brandSecondary: #586955;
+    $brandTertiary: #94abc9;
+    $darkNeutral: rgb(78, 78, 78,1);
+    $lightNeutral: #fff;
+
+    ///// START - Variables for consistent spacing /////
+    // Between Lines of Text
+    $base__05: 4px;
+    $base: 8px;
+    $base__2: 16px;
+    $base__2__5: 20px;
+
+    // Between paragraphs or cards 
+    $base__3: 24px;
+    $base__3__5: 28px;
+    
+    // Between content sections
+    $base__4: 32px;
+    $base__4__5: 36px;
+    $base__6: 48px;
+    $base__6__5: 52px;
+
+    // Large Separation
+    $base__5: 40px;
+    $base__5__5: 44px;
+    $base__7: 56px;
+    $base__7__5: 60px;
+    $base__8: 64px;
+    $base__8__5: 68px;
+    $base__9: 72px;
+    $base__9__5: 76px;
+    $base__10: 80px;
+    $base__10__5: 84px;
+    ///// END - Variables for consistent spacing /////
 
     @import "../../node_modules/bootstrap/scss/functions";
     @import "../../node_modules/bootstrap/scss/variables";
     
-    //Update any sass-maps here
+    // Update any sass-maps here
         $custom-colors: (
-            "bluePrimary": $bluePrimary,
-            "blueSecondary": $blueSecondary,
-            "greenPrimary": $greenPrimary,
-            "greenSecondary": $greenSecondary,
-            "pinkPrimary": $pinkPrimary,
-            "pinkSecondary": $pinkSecondary
+            "brandPrimary": $brandPrimary,
+            "brandSecondary": $brandSecondary,
+            "brandTertiary": $brandTertiary,
+            "darkNeutral": $darkNeutral,
+            "lightNeutral": $lightNeutral
         );
     
         $theme-colors: map-merge($theme-colors, $custom-colors);

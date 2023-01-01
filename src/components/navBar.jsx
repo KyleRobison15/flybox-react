@@ -34,7 +34,7 @@ const NavBar = (props) => {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg shadow-sm">
+    <nav className="navbar navbar-expand-lg shadow-sm flex-shrink-0 border">
       <div className="container-fluid">
         <NavLink className="navbar-brand" to="/">
           <img src={flyboxLogo} alt="FlyBox Logo" width="50" height="50" />

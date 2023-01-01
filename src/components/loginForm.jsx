@@ -44,7 +44,7 @@ export class LoginForm extends Form {
         <div className="row">
           <div className="col-3"></div>
           <div className="col">
-            <div className="loginForm shadow p-5 mt-5 bg-body-tertiary border rounded-3">
+            <div className="login-form shadow p-5 mt-5 bg-body-tertiary border rounded-3">
               <h1 className="display-5 text-center">Welcome Back</h1>
               <form onSubmit={this.handleSubmit}>
                 {this.renderInputElement("username", "Username")}

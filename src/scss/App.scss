@@ -10,17 +10,14 @@
     object-fit: cover;
 }
 
-.recipe {
-    border-color: $bluePrimary;
-    border-style: solid;
-    background-color: $blueSecondary;
+.bg-left{
+    background-color: $primary;
 }
 
-.flyTitle {
-    border-color: $bluePrimary;
-    border-style: solid;
-    background-color: $blueSecondary;
+.bg-right{
+    background-color: $light;
 }
+
 
 /* Font Style: Fredoka One */
 /* Darker Green: #71b956 ; 113, 185, 86, 1 */

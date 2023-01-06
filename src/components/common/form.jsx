@@ -167,7 +167,7 @@ export class Form extends Component {
             error={errors[name]}
           />
         </div>
-        <div className="col-1 d-flex align-items-center">
+        <div className="col-1 pt-3 me-2 d-flex align-items-center justify-content-center">
           <PasswordToggle
             showPassword={showPassword}
             onPasswordToggle={this.handlePasswordToggle}

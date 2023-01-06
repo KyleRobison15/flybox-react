@@ -1,11 +1,23 @@
     //Define Custom Variables Here
     
     $primary: rgb(184, 202, 181, 1);
+    $danger: rgb(146, 64, 64);
     $brandPrimary: rgb(184, 202, 181, 1);
+    $brandPrimaryTrans: rgba(184, 202, 181, 0.444);
     $brandSecondary: #586955;
     $brandTertiary: #94abc9;
     $darkNeutral: rgb(78, 78, 78,1);
     $lightNeutral: #fff;
+    $terrestrial: rgb(174, 177, 140);
+    $attractor: rgb(211, 124, 52);
+    $stonefly: rgb(192, 178, 57);
+    $mayfly: rgb(149, 188, 246);
+    $caddis: rgb(87, 175, 176);
+    $midge: rgb(196, 112, 197);
+    $adult: rgb(145, 37, 37);
+    $emerger: rgb(216, 200, 27);
+    $nymph: rgb(83, 134, 61);
+
 
     ///// START - Variables for consistent spacing /////
     // Between Lines of Text
@@ -46,9 +58,20 @@
             "brandSecondary": $brandSecondary,
             "brandTertiary": $brandTertiary,
             "darkNeutral": $darkNeutral,
-            "lightNeutral": $lightNeutral
+            "lightNeutral": $lightNeutral,
+            "terrestrial": $terrestrial,
+            "attractor": $attractor,
+            "stonefly": $stonefly,
+            "mayfly": $mayfly,
+            "midge": $midge,
+            "caddis": $caddis,
+            "adult": $adult,
+            "nymph": $nymph,
+            "emerger": $emerger,
         );
     
         $theme-colors: map-merge($theme-colors, $custom-colors);
 
     @import "../../node_modules/bootstrap/scss/bootstrap";
+    @import "../../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+    @import "../../node_modules/bootstrap-icons/font/bootstrap-icons.scss";

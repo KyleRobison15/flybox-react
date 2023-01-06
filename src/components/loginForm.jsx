@@ -42,10 +42,10 @@ export class LoginForm extends Form {
     return (
       <div className="container">
         <div className="row">
-          <div className="col-3"></div>
+          <div className="col-xl-4 col-lg-3 col-md-3 col-sm-2 col-xs-2"></div>
           <div className="col">
-            <div className="login-form shadow p-5 mt-5 bg-body-tertiary border rounded-3">
-              <h1 className="display-5 text-center">Welcome Back</h1>
+            <div className="login-form shadow bg-body-tertiary border rounded-3">
+              <h3 className="text-center">Welcome Back</h3>
               <form onSubmit={this.handleSubmit}>
                 {this.renderInputElement("username", "Username")}
                 {this.renderPasswordToggleInput("password", "Password")}
@@ -59,7 +59,7 @@ export class LoginForm extends Form {
               </div>
             </div>
           </div>
-          <div className="col-3"></div>
+          <div className="col-xl-4 col-lg-3 col-md-3 col-sm-2 col-xs-2"></div>
         </div>
       </div>
     );

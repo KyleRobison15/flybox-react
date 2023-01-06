@@ -9,6 +9,7 @@ import Logout from "./components/logout";
 import Flybox from "./components/flybox";
 import Fly from "./components/fly";
 import Profile from "./components/profile";
+import NewFlyForm from "./components/newFlyForm";
 import "./scss/App.scss";
 
 class App extends Component {
@@ -29,6 +30,7 @@ class App extends Component {
           <Route path="/login" element={<LoginForm />} />
           <Route path="/logout" element={<Logout />} />
           <Route path="/profile" element={<Profile user={user} />} />
+          <Route path="/new" element={<NewFlyForm user={user} />} />
           <Route path="/flybox" element={<Flybox user={user} />} />
           <Route path="/flybox/:flyName" element={<Fly user={user} />} />
           <Route

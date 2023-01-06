@@ -19,11 +19,11 @@ const NavBar = (props) => {
     } else {
       return (
         <React.Fragment>
+          <NavLink className="nav-link" to="/new">
+            New
+          </NavLink>
           <NavLink className="nav-link" to="/flybox" user={user}>
             Flybox
-          </NavLink>
-          <NavLink className="nav-link" to="/profile">
-            {user.username}
           </NavLink>
           <NavLink className="nav-link" to="/logout">
             Logout

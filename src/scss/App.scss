@@ -4,20 +4,48 @@
     font-family: Fredoka;
 }
 
+.video{
+    margin: $base__8;
+}
+
 .card-img-top {
     width: 100%;
     height: 10vw;
     object-fit: cover;
 }
 
-.bg-left{
-    background-color: $primary;
+.login-form, .register-form{
+    margin-top: $base__4;
+    padding: $base__3;
 }
 
-.bg-right{
+.video-section{
+    background-color: $brandPrimary;
+}
+
+.details-section{
     background-color: $light;
 }
 
+.details{
+    padding: $base__3;
+}
+
+.details-header{
+    padding: $base__2;
+    background-color: rgb(232, 232, 232);
+}
+
+.materials-list{
+    padding-top: $base;
+    max-height: 45vh;
+    overflow: scroll;
+}
+
+.bi-list{
+    cursor: pointer;
+    font-size: 1.5rem;
+}
 
 /* Font Style: Fredoka One */
 /* Darker Green: #71b956 ; 113, 185, 86, 1 */

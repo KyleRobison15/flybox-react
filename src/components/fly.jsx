@@ -1,37 +1,26 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import YoutubeEmbed from "./common/youtubeEmbed";
+import FlyDetails from "./flyDetails";
 
-const Fly = (props) => {
+const Fly = ({ user }) => {
   const { flyName } = useParams(); // Object destructuring here because useParams returns an object with property that matches the URL params
-  const user = props.user;
-  if (props.user) {
+
+  if (user) {
     const flyArray = user.flies.filter((fly) => fly.name === flyName);
     const fly = flyArray[0];
-
-    const {
-      name,
-      description,
-      lifecycle,
-      sizeRange,
-      favoriteSize,
-      category,
-      recipe,
-      tick,
-      tyingNotes,
-      stockImageUrl,
-      embedId,
-      retailPrice,
-    } = fly;
+    const { embedId } = fly;
 
     return (
       <div className="container-fluid d-flex vh-100">
         <div className="row flex-grow-1">
-          <div className="col-8 bg-left border">
-            <h1>Video Column</h1>
+          <div className="col-lg-8 video-section border">
+            <div className="d-flex justify-content-center align-items-center h-100">
+              <YoutubeEmbed embedId={embedId} />
+            </div>
           </div>
-          <div className="col bg-right border">
-            <h1>Details Column</h1>
+          <div className="col-lg details-section border">
+            <FlyDetails fly={fly} />
           </div>
         </div>
       </div>

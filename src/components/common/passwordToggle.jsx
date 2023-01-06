@@ -1,21 +1,19 @@
-import React, { Component } from "react";
+import React from "react";
 
-class PasswordToggle extends Component {
-  getIconClasses = () => {
+const PasswordToggle = (props) => {
+  const getIconClasses = () => {
     let classes = "fa fa-eye";
-    return this.props.showPassword === true ? classes : classes + "-slash";
+    return props.showPassword === true ? classes : classes + "-slash";
   };
 
-  render() {
-    return (
-      <i
-        onClick={this.props.onPasswordToggle}
-        style={{ cursor: "pointer" }}
-        className={this.getIconClasses()}
-        aria-hidden="true"
-      />
-    );
-  }
-}
+  return (
+    <i
+      onClick={props.onPasswordToggle}
+      style={{ cursor: "pointer" }}
+      className={getIconClasses()}
+      aria-hidden="true"
+    />
+  );
+};
 
 export default PasswordToggle;
